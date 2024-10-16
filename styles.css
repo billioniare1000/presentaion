@@ -1,0 +1,239 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background: #6a11cb;
+    color: white;
+    padding: 15px;
+     position: sticky; 
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #2575fc;
+}
+
+section {
+    padding: 50px 20px;
+    margin: 20px 0;
+    background: #f4f4f4;
+    border-radius: 10px;
+}
+
+.section-header {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.goals {
+    display: flex;
+    flex-direction: column;
+}
+
+.goal {
+    margin: 10px 0;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.result-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.gallery img {
+    width: 150px;
+    border-radius: 5px;
+}
+
+.testimonial {
+    border-left: 5px solid #6a11cb;
+    padding-left: 15px;
+    margin: 15px 0;
+    background: #e9ecef;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #6a11cb;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #2575fc;
+}
+
+ 
+.feature, .goal, .testimonial {
+    transition: transform 0.3s, box-shadow 0.3s;
+  
+}
+
+.feature:hover, .goal:hover, .testimonial:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(170deg, #2575fc, #6a11cb);
+    color: white;
+}
+@keyframes slide-in {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+
+.section-header {
+    animation: slide-in 0.5s ease forwards;
+}
+.corner-image {
+    position: absolute;
+    top: 20px; /* المسافة من أعلى */
+    right: 20px; /* المسافة من اليمين */
+    width: 150px; /* عرض الصورة */
+    border-radius: 10px; /* جعل الزوايا دائرية */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* تأثير الظل */
+}
+ 
+
+ /* إعدادات صورة الغلاف */
+.cover-image {
+  margin-top: -1px;
+    position: relative;
+    background-image: url('./imges/OIP\ \(2\).jpg'); /* ضع مسار الصورة هنا */
+    background-size: cover; /* لجعل الصورة تغطي كامل المنطقة */
+    background-position: center; /* لتوسيط الصورة */
+    height: 100vh; /* لجعل الصورة تغطي كامل الشاشة */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     
+   
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.cover-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    background: rgba(0, 0, 0, 0.664); /* لتعتيم الخلفية */
+    z-index: -1;
+}
+
+.cover-text {
+    z-index: 2;
+}
+
+.cover-text h1 {
+    font-size: 3em;
+}
+
+.cover-text p {
+    font-size: 1.5em;
+}
+.tret{
+    position: absolute;
+    color: white;
+    top: 10%;
+    right: 0;
+    font-size:50px;
+    padding-right: 5px;
+    
+
+}
+.tret:hover{
+    transform: scale(1.04);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+
+}
+.trat{
+    position: absolute;
+    color: white;
+    top: 30%;
+    right: 0;
+    font-size:20px;
+    padding-right: 5px;
+    
+
+}
+.trat:hover{
+    transform: scale(1.04);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+
+}
+.trft{
+    position: absolute;
+    color: white;
+    top: 50%;
+    right: 0;
+    font-size:20px;
+    padding-right: 5px;
+    
+
+}
+.trft:hover{
+    transform: scale(1.04);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+
+
+
