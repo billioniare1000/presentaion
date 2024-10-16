@@ -28,4 +28,3 @@ document.addEventListener("DOMContentLoaded", function () {
       this.reset(); // إعادة تعيين النموذج
     });
 });
- 

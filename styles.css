@@ -3,21 +3,36 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #575757;
 }
+ 
 
-nav {
-    background: #6a11cb;
+ 
+
+ 
+
+
+
+ nav {
+    background: #10021f;
     color: white;
     padding: 15px;
      position: sticky; 
     top: 0;
     z-index: 1000;
+    
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content:right;
+    align-items:center;
+    
+     
+     
+    
+     
 }
 
 nav ul li {
@@ -32,23 +47,33 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #2575fc;
-}
+} 
 
 section {
     padding: 50px 20px;
     margin: 20px 0;
     background: #f4f4f4;
     border-radius: 10px;
+    background-color: rgb(6, 6, 31);
 }
 
 .section-header {
     font-size: 2em;
     margin-bottom: 15px;
+     color: white;
 }
 
 .goals {
     display: flex;
     flex-direction: column;
+}
+.goel {
+    margin: 70px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+    width: 87%;
 }
 
 .goal {
@@ -56,6 +81,7 @@ section {
     padding: 10px;
     background: #fff;
     border-radius: 5px;
+   
 }
 
 .result-image {
@@ -136,8 +162,8 @@ form button:hover {
 }
 .corner-image {
     position: absolute;
-    top: 20px; /* المسافة من أعلى */
-    right: 20px; /* المسافة من اليمين */
+    top: 1px; /* المسافة من أعلى */
+    right: 10px; /* المسافة من اليمين */
     width: 150px; /* عرض الصورة */
     border-radius: 10px; /* جعل الزوايا دائرية */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* تأثير الظل */
@@ -233,6 +259,26 @@ form button:hover {
     transition: transform 0.3s, box-shadow 0.3s;
 
 }
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* حجم الخط للأجهزة الصغيرة */
+    }
+    nav ul {
+        flex-direction: column; /* جعل القائمة عمودية */
+    }
+}
+ 
+ 
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* القائمة العمودية للأجهزة الصغيرة */
+    }
+}
+img {
+    max-width: 100%;
+    height: auto; /* يجعل الصورة تتناسب مع حجم العنصر */
+}
+
 
 
 
