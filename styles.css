@@ -3,17 +3,73 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #575757;
+    background-color: rgb(6, 6, 31);
+    /* background-color: #575757; */
+}
+ 
+.clip-path {
+    clip-path: polygon(100% 0, 100% 100%, 
+    49% 100%,69% 50%, 48% 0) ;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("./imges/1.jpg");
+    background-size: 57%;
+    
+    
+      
+        
+    
+}
+ 
+.text {
+    color: #fff;
+    padding: 40px 80px;
+}
+.text h1 {
+    font-size: 60px;
+}
+.text p{
+    width: 65%;
+}
+.text span {
+    color: rgba(252, 70, 107, 1);
+
+}
+.btn {
+     background:rgb(2, 236, 217);
+      /*radial-gradient(
+        circle ,
+        rgb(2, 236, 217) 30%,
+        rgba(252, 70, 107, 1) 100%
+        
+    ); */
+    padding: 20px 40px ;
+    display: inline-block;
+    margin-top: 20px;
+    transition: 0.5s;
+    text-decoration: none;
+     
+}
+.btn:hover{
+    transform: translateY(-5px);
+}
+.img {
+    position: absolute;
+    right: -600px;
+    top: 250px;
+}
+img {
+    width: 40%;
+    border: none;
+    border-radius: 20px;
+
 }
  
 
- 
-
- 
 
 
-
- nav {
+  nav {
     background: #10021f;
     color: white;
     padding: 15px;
@@ -47,7 +103,7 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #2575fc;
-} 
+}  
 
 section {
     padding: 50px 20px;
@@ -162,9 +218,9 @@ form button:hover {
 }
 .corner-image {
     position: absolute;
-    top: 1px; /* المسافة من أعلى */
-    right: 10px; /* المسافة من اليمين */
-    width: 150px; /* عرض الصورة */
+    top: 10px; /* المسافة من أعلى */
+    right: 0px; /* المسافة من اليمين */
+    width: 160px; /* عرض الصورة */
     border-radius: 10px; /* جعل الزوايا دائرية */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* تأثير الظل */
 }
