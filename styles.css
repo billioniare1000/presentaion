@@ -392,6 +392,17 @@ img {
     .clip-path{
         background-image: none;
     }
+    .text h1{
+        font-size: 30px;
+        padding-bottom: 20px;
+        
+         
+    }
+    .text  p{
+        width: 100%;
+         
+    }
+
 
 
 }
