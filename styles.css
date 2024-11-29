@@ -402,6 +402,12 @@ img {
         width: 100%;
          
     }
+    .nk{
+        max-width: 300px;
+        max-height: 400px;
+        overflow: auto;
+    }
+
 
 
 
