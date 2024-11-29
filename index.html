@@ -27,11 +27,10 @@
                     <li><a href="#section1">المقدمة</a></li>
                     <li><a href="#section2">الاعضاء</a></li>
                     <li><a href="#gallery"> المكونات  </a></li>
-                    <li><a href="#section3">الاهداف</a></li>
+                    <li><a href="#section3">الانظمه</a></li>
                     <li><a href="#section4">النتائج</a></li>
-                    <li><a href="#features">المميزات</a></li>
-                    <li><a href="#testimonials">  المصادر </a></li>
-                    <li><a href="#contact"> تلخيص المشروع  </a></li>
+                    <li><a href="#features">الكود</a></li>
+                   
                 </ul>
               </div>
         
@@ -49,7 +48,7 @@
             This project took a big effort from us and this
              is the main source that we adopted and got the main idea out of it 
         </p>
-        <a href="https://youtu.be/I2RNq90l2nc?si=VYkcIEXm21_NyTqV" class="btn" target="_blank"> source =></a>
+        <a href="https://www.youtube.com/playlist?list=PL5F3LnEjILXjBA53Fpiv1IzkAxluQfhE5" class="btn" target="_blank"> source =></a>
     </div>
     <div class="img">
          
@@ -347,7 +346,7 @@
             </div>
             
         </div>
-    </section>
+    <!-- </section>
     <section id="section3" data-aos="fade-left">
         <h2 class="section-header" id="section-header"> فيديوا لشرح التركيب</h2>
         <div class="goals">
@@ -355,29 +354,430 @@
                 <source src="music/VID-20241105-WA0075.mp4" type="video/mp4">
              </video>
         </div>
-    </section>
+    </section> -->
 
 
     <section id="section4" data-aos="fade-up">
         <h2 class="section-header" id="section-header">النتائج</h2>
-        <p id="intro-text" class="result">بعد تنفيذ المشروع، تم تحقيق نتائج ملموسة. بعض النتائج الرئيسية تشمل:</p>
+        <p id="intro-text" class="result">After implementing the project, tangible results were achieved. Some of the key outcomes include:</p>
         <ul class="result">
-            <li data-aos="zoom-in">زيادة الكفاءة بنسبة 30% مقارنة بالطرق السابقة.</li>
-            <li data-aos="zoom-in">تحسين تجربة المستخدم من خلال واجهة سهلة الاستخدام.</li>
-            <li data-aos="zoom-in">توفير تكاليف تشغيلية بنسبة 20%.</li>
-            <li data-aos="zoom-in">رفع مستوى رضا العملاء بنسبة 25%.</li>
-            <li data-aos="zoom-in">توسيع نطاق الخدمات المقدمة لتلبية احتياجات أكبر عدد من المستخدمين.</li>
+            <li data-aos="zoom-in"> The ability to detect the operating system from a phone using Bluetooth.</li>
+            <li data-aos="zoom-in"> The car's ability to overcome obstacles efficiently and accurately.</li>
+            <li data-aos="zoom-in"> The car's ability to maintain a safe distance from objects accurately and efficiently.</li>
+            <li data-aos="zoom-in"> Achieving high efficiency in the car's ability to follow the black line.</li>
+            <li data-aos="zoom-in"> The car responds to Bluetooth commands with high accuracy, efficiency, and speed without any delay.</li>
         </ul>
         <video controls width="1000">
-            <source src="music/كليب غشيم - عنبه Clip Ghashem - 3enba [Official Video] 2020_2.mp4" type="video/mp4">
+            <source src="music/فيديو واتساب بتاريخ 2024-11-30 في 00.04.51_c9721547.mp4" type="video/mp4">
          </video>
     </section>
 
     <section id="features" data-aos="fade-up">
-        <h2 class="section-header" id="section-header">الميزات</h2>
-        <div class="goals">
-        <div class="goal" data-aos="flip-left">•The robot can change between 4 systems
-             based on the code and the surrounding environment </div>
+        <h2 class="section-header" id="section-header">الكود</h2>
+        <div  >
+        <div    data-aos="flip-left"> 
+           
+                <pre class="nk"><code>
+                    #include &lt;Servo.h&gt;
+                        volatile int IN1;
+                        volatile int IN2;
+                        volatile int IN3;
+                        volatile int IN4;
+                        volatile char Var;
+                        volatile char sys;
+                        volatile int righyDistance;
+                        volatile int leftDistance;
+                        volatile int leftS;
+                        volatile int centerS;
+                        volatile int rightS;
+                        volatile boolean cornerTrue;
+                        volatile boolean followTrue;
+                        volatile boolean lineTrue;
+                        volatile int destance;
+                    void LeftSideForward(int speed) {
+                          // Sappouse to be left side
+                          analogWrite(IN3,0);
+                          analogWrite(IN4,speed);
+                        }
+                    void RightSideForward(int speed) {
+                          // Sappouse to be right side
+                          analogWrite(IN1,speed);
+                          analogWrite(IN2,0);
+                        }
+                        
+                        void LeftSideBack(int speed) {
+                          // Sappouse to be left side
+                          analogWrite(IN3,speed);
+                          analogWrite(IN4,0);
+                        }
+                        
+                        void RightSideBack(int speed) {
+                          // Sappouse to be right side
+                          analogWrite(IN1,0);
+                          analogWrite(IN2,speed);
+                        }
+                        
+                        void Forward(int forward_speed) {
+                          RightSideForward(forward_speed);
+                          LeftSideForward(forward_speed);
+                        }
+                        
+                        Servo servo_4;
+                        
+                        void Back(int Back_speed) {
+                          RightSideBack(Back_speed);
+                          LeftSideBack(Back_speed);
+                        }
+                        
+                        void turn_left(int speed) {
+                          LeftSideBack(speed);
+                          RightSideForward(speed);
+                        }
+                        
+                        void turn_right(int speed) {
+                          LeftSideForward(speed);
+                          RightSideBack(speed);
+                        }
+                        
+                        void left_slow(int forward_speed) {
+                          RightSideForward(forward_speed / 2);
+                          LeftSideForward(forward_speed);
+                        }
+                        
+                        void turn_left_delay(int speed, int time) {
+                          LeftSideBack(speed);
+                          RightSideForward(speed);
+                          delay(time);
+                          stop();
+                        }
+                        
+                        void turn_right_delay(int speed, int time) {
+                          LeftSideForward(speed);
+                          RightSideBack(speed);
+                          delay(time);
+                          stop();
+                        }
+                        
+                        void right_slow(int forward_speed) {
+                          RightSideForward(forward_speed);
+                          LeftSideForward(forward_speed / 2);
+                        }
+                        
+                        void stop() {
+                          LeftSideForward(0);
+                          RightSideForward(0);
+                        }
+                        void blutooth_controle_only() {
+                          if (Serial.available() > 0) {
+                            Var = Serial.read();
+                          }
+                          switch (Var) {
+                           case 'F':
+                            Forward(200);
+                            break
+                           case 'B':
+                            Back(200);
+                            break
+                           case 'L':
+                            turn_left(200);
+                            break;
+                           case 'G':
+                            turn_left(200);
+                            break
+                           case 'R':
+                            turn_right(200);
+                            break;
+                           case 'I':
+                            turn_right(200);
+                            break;
+                           case 'S':
+                            stop();
+                            break;
+                          }
+                        }
+                        float checkdistance_A1_A2() {
+                          digitalWrite(A1, LOW);
+                          delayMicroseconds(2);
+                          digitalWrite(A1, HIGH);
+                          delayMicroseconds(10);
+                          digitalWrite(A1, LOW);
+                        
+                          float distance = pulseIn(A2, HIGH) / 58.00;
+                          delay(10);
+                          return distance;
+                        }
+                        
+                        void follow_car() {
+                          destance = checkdistance_A1_A2();
+                          if (destance >= 15 && destance <= 20) {
+                            stop();
+                          } else if (destance > 20) {
+                            Forward(180);
+                          } else if (destance < 15) {
+                            Back(180);
+                          }
+                        }
+                        
+                        void corner_car() {
+                          servo_4.write(90);
+                          delay(500);
+                          while (checkdistance_A1_A2() > 30) {
+                            Forward(160);
+                          }
+                          stop();
+                          servo_4.write(0);
+                          delay(1000);
+                          righyDistance = checkdistance_A1_A2();
+                          servo_4.write(180);
+                        
+                          delay(1000);
+                        
+                          leftDistance = checkdistance_A1_A2();
+                        
+                          if (righyDistance >= leftDistance) {
+                        
+                            turn_right(180);
+ 
+                          } else {
+                        
+                            turn_left(180);
+ 
+                          }
+                        
+                        }
+ 
+                        int mixly_digitalRead(uint8_t pin) {
+                        
+                          pinMode(pin, INPUT);
+                        
+                          return digitalRead(pin);
+                        
+                        }
+                        
+                        
+                        
+                        void line_track() {
+                        
+                          while (checkdistance_A1_A2() > 20) {
+                        
+                            if (mixly_digitalRead(leftS) == 1 && (mixly_digitalRead(centerS) == 1 && mixly_digitalRead(rightS) == 1)) {
+                        
+                              Forward(120);
+                        
+                        
+                        
+                            } else if (mixly_digitalRead(leftS) == 1 && (mixly_digitalRead(centerS) == 1 && mixly_digitalRead(rightS) == 0)) {
+                        
+                              left_slow(150);
+                        
+                            } else if (mixly_digitalRead(leftS) == 1 && (mixly_digitalRead(centerS) == 0 && mixly_digitalRead(rightS) == 0)) {
+                        
+                              turn_left(150);
+                        
+                            } else if (mixly_digitalRead(leftS) == 0 && (mixly_digitalRead(centerS) == 1 && mixly_digitalRead(rightS) == 1)) {
+                        
+                              right_slow(150);
+                        
+                            } else if (mixly_digitalRead(leftS) == 0 && (mixly_digitalRead(centerS) == 0 && mixly_digitalRead(rightS) == 1)) {
+                        
+                              turn_right(150);
+                        
+                            } else if (mixly_digitalRead(leftS) == 0 && (mixly_digitalRead(centerS) == 0 && mixly_digitalRead(rightS) == 0)) {
+                        
+                              stop();
+                        
+                            }
+                        
+                          }
+                        
+                          stop();
+                        
+                        }
+                        
+                        
+                        
+                        void setup(){
+                        
+                          IN1 = 11;
+                        
+                          IN2 = 6;
+                        
+                          IN3 = 5;
+                        
+                          IN4 = 3;
+                        
+                          Var = 0;
+                        
+                          sys = 0;
+                        
+                          righyDistance = 0;
+                        
+                          leftDistance = 0;
+                        
+                          leftS = 10;
+                        
+                          centerS = 9;
+                        
+                          rightS = 8;
+                        
+                          cornerTrue = false;
+                        
+                          followTrue = false;
+                        
+                          lineTrue = false;
+                        
+                          servo_4.attach(4);
+                        
+                          Serial.begin(9600);
+                        
+                          destance = 0;
+                        
+                          pinMode(A1, OUTPUT);
+                        
+                          pinMode(A2, INPUT);
+                        
+                        }
+                        
+                        
+                        
+                        void loop(){
+                        
+                          servo_4.write(90);
+                        
+                          delay(0);
+                        
+                          if (Serial.available() > 0) {
+                        
+                            Var = Serial.read();
+                        
+                        
+                        
+                          }
+                        
+                          switch (Var) {
+                        
+                           case 'F':
+                        
+                            Forward(200);
+                        
+                            break;
+                        
+                           case 'B':
+                        
+                            Back(200);
+                        
+                            break;
+                        
+                           case 'L':
+                        
+                            turn_left(200);
+                        
+                            break;
+                        
+                           case 'G':
+                        
+                            turn_left(200);
+                        
+                            break;
+                        
+                           case 'R':
+                        
+                            turn_right(200);
+                        
+                            break;
+                        
+                           case 'I':
+                        
+                            turn_right(200);
+                        
+                            break;
+                        
+                           case 'S':
+                        
+                            stop();
+                        
+                            break;
+                        
+                           case 'W':
+                        
+                            cornerTrue = !cornerTrue;
+                        
+                            break;
+                        
+                           case 'w':
+                        
+                            cornerTrue = !cornerTrue;
+                        
+                            break;
+                        
+                           case 'U':
+                        
+                            followTrue = !followTrue;
+                        
+                            break;
+                        
+                           case 'u':
+                        
+                            followTrue = !followTrue;
+                        
+                            break;
+                        
+                           case 'V':
+                        
+                            lineTrue = !lineTrue;
+                        
+                            break;
+                        
+                           case 'v':
+                        
+                            lineTrue = !lineTrue;
+                        
+                            break;
+                        
+                          }
+                        
+                          if (cornerTrue == true) {
+                        
+                            while (cornerTrue == true) {
+                        
+                              corner_car();
+                        
+                            }
+                        
+                        
+                        
+                          }
+                        
+                          if (followTrue == true) {
+                        
+                            while (followTrue == true) {
+                        
+                              follow_car();
+                        
+                            }
+                        
+                        
+                        
+                          }
+                        
+                          if (lineTrue == true) {
+                        
+                            while (lineTrue == true) {
+                        
+                              line_track();
+                        
+                            }
+                        
+                        
+                        
+                          }
+                        
+                        
+                        
+                        }
+</code>
+                </pre>
+               </div>
              </div>
        
       
@@ -385,39 +785,7 @@
     </section>
 
 
-
-    <section id="testimonials" data-aos="fade-up">
-        <h2 class="section-header" id="section-header"> المصادر</h2>
-        <div class="testimonial" data-aos="slide-up">
-            <p>"هذا المشروع كان له تأثير كبير على عملي. شكرًا لكل من ساهم!"</p>
-            <p>- شخص 1</p>
-        </div>
-        <div class="testimonial" data-aos="slide-up">
-            <p>"لقد أدهشتني النتائج، وأوصي بشدة بهذا النوع من المشاريع."</p>
-            <p>- شخص 2</p>
-        </div>
-        <div class="testimonial" data-aos="slide-up">
-            <p>"خدمة العملاء كانت رائعة، وأنا راضٍ جدًا عن النتائج."</p>
-            <p>- شخص 3</p>
-        </div>
-    </section>
-
-    <section id="contact" data-aos="fade-up">
-        <h2 class="section-header" id="section-header"> تلخيص المشروع </h2>
-        <div class="testimonial" data-aos="slide-up">
-            <p>"هذا المشروع كان له تأثير كبير على عملي. شكرًا لكل من ساهم!"</p>
-            <p>- شخص 1</p>
-        </div>
-        <div class="testimonial" data-aos="slide-up">
-            <p>"لقد أدهشتني النتائج، وأوصي بشدة بهذا النوع من المشاريع."</p>
-            <p>- شخص 2</p>
-        </div>
-        <div class="testimonial" data-aos="slide-up">
-            <p>"خدمة العملاء كانت رائعة، وأنا راضٍ جدًا عن النتائج."</p>
-            <p>- شخص 3</p>
-        </div>
-        
-    </section>
+ 
 
     
     <script src="script.js"></script>

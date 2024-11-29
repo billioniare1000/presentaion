@@ -512,3 +512,10 @@ width: 620px;    }
    padding-left: 15px;
 
 }
+.nk{
+    background-color: gray;
+    max-height:min-content;
+    color: white;
+    overflow: auto;
+    max-height: 500px;
+}
