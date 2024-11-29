@@ -1,26 +1,30 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Kufam", sans-serif;
+  
     line-height: 1.6;
     margin: 0;
     padding: 0;
     background-color: #b9bfc5;
     /* background-color: #575757; */
+    
 }
+
  
 .clip-path {
     clip-path: polygon(100% 0, 100% 100%, 
     49% 100%,69% 50%, 48% 0) ;
     position: absolute;
-    width: 100%;
+    width:  100%;
     height: 100%;
     background: url("./imges/1.jpg");
-    background-size:57%;
+    background-size:650px;
     
     
       
         
-    
-}
+
+} 
+
  
 .text {
     color: #133E87;
@@ -108,7 +112,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #2575fc;
+    color: red;
+    
 }  
 
 section {
@@ -117,25 +122,45 @@ section {
     background: #f4f4f4;
     border-radius: 10px;
     background-color: #133E87;
+     
 }
 
 .section-header {
-    font-size: 2em;
+    font-size: 3em;
     margin-bottom: 15px;
-     color: #F6FDC3;
+     color: white;
+     text-align: center;
+     font-weight: bold;
+      
+
 }
 
 .goals {
     display: flex;
     flex-direction: column;
+    font-weight: bold;
+}
+.intro{
+    margin: 70px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 14px;
+    
+ 
+}
+.int{
+    font-size: 25px;
+    font-weight: bold;
+     
 }
 .goel {
-    margin: 70px;
-    padding: 10px;
+  
     background: #fff;
-    border-radius: 5px;
+    border-radius: 40px;
     text-align: center;
-    width: 87%;
+    width: 100%;
+    font-weight: bold;
+    font-size: large;
 }
 
 .goal {
@@ -152,10 +177,12 @@ section {
 }
 
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
     gap: 15px;
+     
+    
+    
 }
 
 .gallery img {
@@ -322,31 +349,73 @@ form button:hover {
     transition: transform 0.3s, box-shadow 0.3s;
 
 }
-@media (max-width: 768px) {
-    body {
-        font-size: 16px; /* حجم الخط للأجهزة الصغيرة */
-    }
-    nav ul {
-        flex-direction: column; /* جعل القائمة عمودية */
-    }
-}
- 
- 
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column; /* القائمة العمودية للأجهزة الصغيرة */
-    }
-}
+
+
 img {
     max-width: 100%;
-    height: auto; /* يجعل الصورة تتناسب مع حجم العنصر */
+    height: auto; 
+
+    
 }
 .result{
     color: white;
     font-size: 22px;
 }
+.compo{
+    display: grid;
+   margin: 7px;
+ grid-template-columns: repeat(1,1fr);
+}
+.cc{
+    color: white;
+} 
+
+.vv{
+    text-align: left;
+     line-height: 2;  
+     font-weight: 350;
+}
+.images{
+   
+    height: 200px;
+    display: flex;
+     
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+  
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   max-width:  100%;
+     
+      
+}
+ @media (max-width: 600px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  @media (min-width: 601px) {
+    body {
+      font-size: 16px;
+       display: grid;
+       grid-template-columns: repeat(1,1fr);
 
 
+    }
+  }
+  @media (min-width: 1025px) {
+    body{
+      font-size: 18px;
+    }
+  } 
+  .ff{
+    color: white;
+    
+    margin:0;
+    font-weight: bold;
+  }
+ 
+ 
 
 
 
