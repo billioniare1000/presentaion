@@ -389,6 +389,9 @@ img {
        
          
     }
+    .clip-path{
+        background-image: none;
+    }
 
 
 }
